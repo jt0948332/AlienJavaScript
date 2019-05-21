@@ -1,25 +1,31 @@
 // from data.js
 var tableData = data;
 
-// YOUR CODE HERE!
+// // YOUR CODE HERE!
 var tbody = d3.select("tbody");
 
-//Change the table to update to striped. Two methods below
-//var table = d3.select("table");
-//table.attr("class", "table table-striped");
-//Change the table to update to striped
-var tablestriped = d3.select("#ufo-table", "table table-striped");
-tablestriped.attr("class", "table table-striped");
-// ADD Data -- Why does this function work, but the below function not??
+// MAKE THE TABLE STRIPED
+var tablestriped = d3.select("#ufo-table");
+  tablestriped.attr("class", "table table-striped");
+
+// Create a filter for date
+// Need to change the datevalue to value of input field
+//Filter is working as it should
+//I NEED SOMEONE TO EXPLAIN WHAT EXACTLY HAPPENS HERE. WHY 2 FUNCTIONS?
+
 
 d3.selectAll("#filter-btn").on("click", function () {
-
-    //Get the input from the form filter
+    d3.selectAll("td").remove();
     var DateElement = d3.select('#datetime');
-    var dateValue = inputElement.property("value");
-console.log(dateValue);
+    var dateValue = DateElement.property("value");
+function SelectDate(keyDate){
+    return keyDate.datetime ===dateValue;
+  }
+  var dateout = data.filter(SelectDate);
+  console.log(dateout);
+  
 
-    tableData.forEach(function (row) {
+      dateout.forEach(function (row) {
         var new_row = tbody.append("tr");
         new_row.append("td").text(row.datetime);
         new_row.append("td").text(row.city);
@@ -29,20 +35,5 @@ console.log(dateValue);
         new_row.append("td").text(row.durationMinutes);
         new_row.append("td").text(row.comments);
     });
-//Prevent Refresh on button click. For some reason this had to be witin the loop. unsure why that is
-d3.event.preventDefault();
+    d3.event.preventDefault();
 });
-//Dynamic table create
-//iterate through each to append all rows
-// tableData.forEach(([city.hv,fgh]) => {
-//     var row = tbody.append("tr");
-//     //append the Data
-//     row.append("td").text(city);
-//     row.append("td").text(city);
-//     row.append("td").text(city);
-//     row.append("td").text(city);
-//     row.append("td").text(city);
-//     row.append("td").text(city);
-//     row.append("td").text(city);
-
-
