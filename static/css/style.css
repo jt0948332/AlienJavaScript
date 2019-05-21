@@ -1,3 +1,7 @@
+title {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 50px;
+}
 .jumbotron {
     background-image: url("https://www.google.com/imgres?imgurl=http%3A%2F%2Flh3.googleusercontent.com%2F88D02QCtbepwrgDtvQSJbhQkRhfvKglaaur6k1QNv8U2SloQHJOedWu0BHUVqGQ4_D6WkN2oq36ADTmMiwREyC1EhSeY4YOYWu-nzyN0%3Ds660&imgrefurl=http%3A%2F%2Fwww.google.com%2Fdoodles%2F50th-anniversary-of-nasa&docid=O0du-lHSBW0AAM&tbnid=GJNe4_0YPH-GFM%3A&vet=10ahUKEwjdgoDxt6HiAhURQq0KHRWXBigQMwgrKAIwAg..i&w=660&h=238&bih=601&biw=1266&q=nasa%20google.com&ved=0ahUKEwjdgoDxt6HiAhURQq0KHRWXBigQMwgrKAIwAg&iact=mrc&uact=8");
     margin-bottom: 0;`enter code here`
@@ -6,4 +10,81 @@
     background-position: center;
     -webkit-background-size: cover;
     background-size: cover;
+}
+body {
+    background: url('https://i.pinimg.com/originals/cb/44/16/cb4416fcb717397bc8852c62e2618ddb.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+  }
+  * {
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #263238;
+}
+
+.btn {
+	display: inline-block;
+	color: white;
+	min-width: 154px;
+	text-decoration: none;
+	margin-right: 50px;
+	padding: 20px;
+	position: relative;
+	text-align: center;
+	
+	&:hover {
+		.button-stroke:nth-child(2) {
+			stroke-dashoffset: 0;
+		}
+	}
+}
+
+#logo {
+  height: 100px;
+  vertical-align: middle;
+}
+
+ul {
+  display: inline;
+  list-style: none;
+}
+
+li {
+  display: inline;
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 20px;
+  margin-left: -5px;
+}
+
+a {
+  text-decoration: none;
+}
+th {
+  color:white;
+  font: bolder;
+}
+
+h1{
+  color:black;
+  font-family: fantasy;
+  font-size: 90px;
+}
+.subhead {
+  color:black;
+  font-family: fantasy;
+  font-size: 30px;
+}
+td {
+  font-size: 15px; 
+}
+th{
+  color:whitesmoke;
+  font-family: fantasy;
+  font-size: 20px;
+  align-content: center
 }

@@ -36,4 +36,5 @@ function SelectDate(keyDate){
         new_row.append("td").text(row.comments);
     });
     d3.event.preventDefault();
+    
 });
